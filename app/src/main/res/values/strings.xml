@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ComposeLessonApp</string>
+    <string name="button_A_text">OK</string>
 </resources>
