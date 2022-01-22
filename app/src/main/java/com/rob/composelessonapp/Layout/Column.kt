@@ -11,9 +11,9 @@ import com.rob.composelessonapp.Text.TextScreen
 fun ColumnScreen() {
     Column {
         Row() {
-            TextScreen()
-            TextScreen()
+//            TextScreen()
+//            TextScreen()
         }
-        TextScreen()
+//        TextScreen()
     }
 }

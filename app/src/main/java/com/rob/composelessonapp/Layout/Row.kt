@@ -15,8 +15,8 @@ fun RowScreen() {
         verticalAlignment = Alignment.CenterVertically,
         modifier = Modifier.fillMaxWidth()
     ) {
-        TextScreen()
-        TextScreen()
+//        TextScreen()
+//        TextScreen()
 //        TextFieldScreen(text ="OK")
     }
 }
