@@ -1,14 +1,18 @@
 package com.rob.composelessonapp
 
+import android.graphics.drawable.Icon
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Home
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
+import com.rob.composelessonapp.Button.CustomButtonScreen
 import com.rob.composelessonapp.Layout.BoxScreen
 import com.rob.composelessonapp.Layout.ColumnScreen
 import com.rob.composelessonapp.Layout.RowScreen
@@ -26,7 +30,8 @@ class MainActivity : ComponentActivity() {
 //            ColumnScreen()
 //           TextFieldScreen("Enter Your Name")
 //           StateScreen()
-            LazyColumnScreen()
+//            LazyColumnScreen()
+            CustomButtonScreen(icon = Icons.Default.Home, label = "toHome", isSelected = true) {}
         }
     }
 }
