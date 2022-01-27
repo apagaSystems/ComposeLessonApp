@@ -7,7 +7,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun ProgressBarScreen() {
+fun CircularProgressBarScreen() {
     CircularProgressIndicator(
         progress = 0.5f,
         strokeWidth = 2.dp,

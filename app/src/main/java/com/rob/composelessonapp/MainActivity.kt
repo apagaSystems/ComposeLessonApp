@@ -12,7 +12,8 @@ import androidx.compose.material.icons.filled.Home
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
-import com.rob.composelessonapp.Button.CustomButtonScreen
+import com.rob.composelessonapp.Button.*
+import com.rob.composelessonapp.Graphics.GraphicsScreen
 import com.rob.composelessonapp.Layout.BoxScreen
 import com.rob.composelessonapp.Layout.ColumnScreen
 import com.rob.composelessonapp.Layout.RowScreen
@@ -28,10 +29,12 @@ class MainActivity : ComponentActivity() {
         setContent {
 //            TextScreen(FontWeight.ExtraBold)
 //            ColumnScreen()
-//           TextFieldScreen("Enter Your Name")
-//           StateScreen()
+//            TextFieldScreen("Enter Your Name")
+//            StateScreen()
 //            LazyColumnScreen()
-            CustomButtonScreen(icon = Icons.Default.Home, label = "toHome", isSelected = true) {}
+//            CustomButtonScreen_3(icon = Icons.Default.Home, label = "toHome", isSelected = true) {}
+//            UsingCustomButton_3()
+            UsingCustomButton_4()
         }
     }
 }
@@ -43,6 +46,6 @@ class MainActivity : ComponentActivity() {
 fun DefaultPreview() {
 
 //        TextScreen()
-//    TextFieldScreen("Enter Your Name")
+//        TextFieldScreen("Enter Your Name")
     BoxScreen()
 }
