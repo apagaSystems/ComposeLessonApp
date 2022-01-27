@@ -1,31 +1,26 @@
 package com.rob.composelessonapp
 
-import android.graphics.drawable.Icon
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Home
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
-import com.rob.composelessonapp.Button.*
-import com.rob.composelessonapp.Graphics.GraphicsScreen
+import androidx.room.Room
+import com.rob.composelessonapp.Button.UsingCustomButton_4
 import com.rob.composelessonapp.Layout.BoxScreen
-import com.rob.composelessonapp.Layout.ColumnScreen
-import com.rob.composelessonapp.Layout.RowScreen
-import com.rob.composelessonapp.LazyColumn.LazyColumnScreen
-import com.rob.composelessonapp.State.StateScreen
-import com.rob.composelessonapp.Text.TextFieldScreen
-import com.rob.composelessonapp.Text.TextScreen
-import com.rob.composelessonapp.ui.theme.ComposeLessonAppTheme
+import com.rob.composelessonapp.ROOM.AppDatabase
+import com.rob.composelessonapp.ROOM.Employer
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val database = Room.databaseBuilder(            // create database
+            applicationContext,
+            AppDatabase::class.java, "EmployerDB.db"
+        ).build()
+        val employerDao = database.employerDAO()    // create object of DAO class
+        val emp: List<Employer> = employerDao.getAll()  // use method of DAO class
+
         setContent {
 //            TextScreen(FontWeight.ExtraBold)
 //            ColumnScreen()
@@ -38,7 +33,6 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
-
 
 
 @Preview(showBackground = true)

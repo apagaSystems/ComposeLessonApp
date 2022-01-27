@@ -27,7 +27,6 @@ fun StateScreen() {
     var count = remember {
         mutableStateOf(0)
     }
-
     var countSquar = remember {
         mutableStateOf(0)
     }
@@ -66,7 +65,6 @@ fun Incriment(count: MutableState<Int>, countSquar: MutableState<Int>) {
             fontWeight = FontWeight.ExtraBold, modifier = Modifier.padding(15.dp, 15.dp)
         )
     }
-
     Button(
         onClick = {
             count.value++
