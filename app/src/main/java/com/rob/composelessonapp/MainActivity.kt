@@ -8,6 +8,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.room.Room
 import com.rob.composelessonapp.Button.UsingCustomButton_4
 import com.rob.composelessonapp.Layout.BoxScreen
+import com.rob.composelessonapp.LazyColumn.LazyColumnScreen
+import com.rob.composelessonapp.Navigation.NavigationScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,7 +23,9 @@ class MainActivity : ComponentActivity() {
 //            LazyColumnScreen()
 //            CustomButtonScreen_3(icon = Icons.Default.Home, label = "toHome", isSelected = true) {}
 //            UsingCustomButton_3()
-            UsingCustomButton_4()
+//            UsingCustomButton_4()
+
+            NavigationScreen()
         }
     }
 }
