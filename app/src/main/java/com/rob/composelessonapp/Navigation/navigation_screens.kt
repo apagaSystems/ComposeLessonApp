@@ -24,7 +24,7 @@ fun HomeScreen(pageNumber: Int, navController: NavController) {
                 fontSize = 24.sp,
                 fontWeight = FontWeight.Bold,
                 modifier = Modifier.clickable { })
-            Text(text = pageNumber.toString(), fontSize = 16.sp,  color = Color.Red)
+            Text(text = pageNumber.toString(), fontSize = 24.sp,  color = Color.Red)
             Text(
                 text = "Next",
                 fontSize = 24.sp,
@@ -50,7 +50,7 @@ fun FirstScreen(pageNumber: Int, navController: NavController) {
                 fontSize = 24.sp,
                 fontWeight = FontWeight.Bold,
                 modifier = Modifier.clickable { navController.navigate("home") })
-            Text(text = pageNumber.toString(), fontSize = 16.sp, color = Color.Red)
+            Text(text = pageNumber.toString(), fontSize = 24.sp, color = Color.Red)
             Text(
                 text = "Next",
                 fontSize = 24.sp,
@@ -80,7 +80,7 @@ fun SecondScreen(pageNumber: Int, navController: NavController) {
                 text = "Next",
                 fontSize = 24.sp,
                 fontWeight = FontWeight.Bold,
-                modifier = Modifier.clickable { })
+                modifier = Modifier.clickable { navController.navigate("home")})
         }
 
 

@@ -33,18 +33,19 @@ fun   LazyColumnScreen() {
     val listState = rememberLazyListState()
 
     Column(horizontalAlignment = Alignment.CenterHorizontally) {
-        Column(
-            modifier = Modifier
-                .fillMaxWidth(0.95f)
-                .height(100.dp)
-                .padding(10.dp)
-                .background(color = Color.LightGray)
-                .verticalScroll(rememberScrollState())
-        ) {
-            for (i in goodList.indices) {
-                Text(text = "${i+1}. ${goodList[i]}", modifier = Modifier.padding(10.dp, 2.dp))
-            }
-        }
+//        Column(
+//            modifier = Modifier
+//                .fillMaxWidth(0.95f)
+//                .height(100.dp)
+//                .padding(10.dp)
+//                .background(color = Color.LightGray)
+//                .verticalScroll(rememberScrollState())
+//        ) {
+//            for (i in goodList.indices) {
+//                Text(text = "${i+1}. ${goodList[i]}",
+//                    modifier = Modifier.padding(10.dp, 2.dp))
+//            }
+//        }
         LazyColumn(
             modifier = Modifier.fillMaxSize(),
             horizontalAlignment = Alignment.CenterHorizontally
@@ -67,7 +68,7 @@ fun ListItem(itemText: String, inStore: List<Boolean>) {
             .padding(8.dp)
             .height(105.dp),
         shape = RoundedCornerShape(25.dp, 1.dp, 25.dp, 1.dp),
-        elevation = 4.dp,
+        elevation = 8.dp,
         backgroundColor = MaterialTheme.colors.surface
     ) {
         Row(verticalAlignment = Alignment.CenterVertically) {
@@ -84,16 +85,17 @@ fun ListItem(itemText: String, inStore: List<Boolean>) {
                     .padding(16.dp)
                     .fillMaxWidth()
             ) {
-                Row(horizontalArrangement = Arrangement.End, modifier = Modifier.fillMaxWidth()) {
-                    BasicText(
-                        text = "Fruits",
+
+                    Text(
+                        text = "Fruits", modifier=Modifier.fillMaxWidth(),
+                        textAlign=TextAlign.Right,
                         style = MaterialTheme.typography.body2.copy(
                             color = Color.LightGray.copy(
                                 alpha = 0.7f
                             )
                         )
                     )
-                }
+
                 Text(
                     text = itemText, fontWeight = FontWeight.Bold, fontSize = 20.sp,
                     textAlign = TextAlign.Center, color = Color.DarkGray
