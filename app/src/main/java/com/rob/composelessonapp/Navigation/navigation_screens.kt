@@ -52,7 +52,7 @@ fun FirstScreen(pageNumber: Int, navController: NavController) {
                 modifier = Modifier.clickable { navController.navigate("home") })
             Text(text = pageNumber.toString(), fontSize = 24.sp, color = Color.Red)
             Text(
-                text = "Next",
+                text = "Next->",
                 fontSize = 24.sp,
                 fontWeight = FontWeight.Bold,
                 modifier = Modifier.clickable { navController.navigate("switch") })
